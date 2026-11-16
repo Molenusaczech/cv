@@ -1,5 +1,6 @@
 import { Card } from "@workspace/ui/components/card"
 import type { SkillData } from "@/types/profile"
+import { ReactNode } from "react"
 
 type SkillsCardProps = {
     skills: SkillData[]
@@ -25,7 +26,7 @@ function SkillBar({ skill }: SkillBarProps) {
         <article className="space-y-4 rounded-lg border bg-background/50 p-4">
             <div className="flex items-start gap-3">
                 <div className="flex size-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
-                    <skill.icon aria-hidden="true" className="size-5" />
+                    {skill.icon}
                 </div>
                 <div className="min-w-0 space-y-1">
                     <h3 className="font-medium">{skill.name}</h3>
@@ -95,19 +96,21 @@ function SkillBar({ skill }: SkillBarProps) {
     )
 }
 
-export default function SkillsCard({ skills }: SkillsCardProps) {
+export default function SkillsCard({ title, subheader, children }: {
+    title: string,
+    subheader: string,
+    children: ReactNode
+}) {
     return (
         <Card className="w-full max-w-xs gap-5 px-6 py-6 shadow-sm md:max-w-4xl">
             <div className="space-y-1">
-                <h2 className="text-2xl font-semibold">Skills</h2>
+                <h2 className="text-2xl font-semibold">{title}</h2>
                 <p className="text-sm text-muted-foreground">
-                    A snapshot of my current experience and learning goals.
+                    {subheader}
                 </p>
             </div>
             <div className="grid gap-3 md:grid-cols-2">
-                {skills.map((skill) => (
-                    <SkillBar key={skill.name} skill={skill} />
-                ))}
+                {children}
             </div>
         </Card>
     )

@@ -1,10 +1,11 @@
 import type { LucideIcon } from "lucide-react"
+import { ReactNode } from "react"
 
 type SkillData = {
     name: string,
-    icon: LucideIcon,
+    icon: ReactNode,
     summary: string,
-    description: string,
+    description: ReactNode,
     delimiters: string[],
     progress: number
 }
@@ -14,8 +15,7 @@ type ProfileData = {
     lastName: string,
     motto: string,
     photo: string,
-    profilePicture: string,
-    skills: SkillData[]
+    profilePicture: string
 }
 
 export type { ProfileData, SkillData }
