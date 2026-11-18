@@ -16,6 +16,14 @@ type ProfileData = {
     motto: string,
     photo: string,
     profilePicture: string
+    education: EducationData[]
 }
 
-export type { ProfileData, SkillData }
+type EducationData = {
+    institution: string
+    program: string
+    period: string
+    description: ReactNode
+}
+
+export type { EducationData, ProfileData, SkillData }

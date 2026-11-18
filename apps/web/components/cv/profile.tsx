@@ -6,7 +6,7 @@ export default function Profile({ profile }: { profile: ProfileData }) {
     const fullName = `${profile.firstName} ${profile.lastName}`
 
     return (
-        <Card className="w-full max-w-xs items-center gap-5 px-8 py-8 text-center shadow-sm md:max-w-2xl md:flex-row md:gap-8 md:text-left">
+        <Card className="w-full max-w-xs items-center gap-5 px-8 py-8 text-center shadow-sm md:max-w-4xl md:flex-row md:gap-8 md:text-left">
             <div
                 aria-label={`Profile photo of ${fullName}`}
                 className="group/avatar relative size-36 rounded-full [perspective:900px] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"

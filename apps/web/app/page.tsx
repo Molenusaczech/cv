@@ -2,12 +2,14 @@ import Profile from "@/components/cv/profile"
 import ThemeToggle from "@/components/theme-toggle"
 import SkillsCard, { SkillBar } from "@/components/cv/skillsCard"
 import TextCard from "@/components/cv/textCard"
+import EducationCard from "@/components/cv/educationCard"
 import rajtslegrData from "@/data/rajtslegr"
 import { Button, buttonVariants } from "@workspace/ui/components/button"
 import { Code2 } from "lucide-react"
 import Link from "next/link"
 import ReactCountryFlag from "react-country-flag"
 import { Metadata } from "next"
+import AchievementsCard from "@/components/cv/achievementsCard"
 
 export const metadata: Metadata = {
   title: "Daniel Rajtšlégr"
@@ -21,7 +23,7 @@ export default function Page() {
       <TextCard
         title="About me"
         >
-          I'm a 20 year old guy, that loves to make stuff. Coding, organizing tournaments, videomaking, 3d printing etc.
+          I'm a 20 year old guy that loves to make stuff. Coding, organizing tournaments, videomaking, 3d printing etc.
           My passion is gaming of all kinds. I especially like card games like Magic the Gathering and Scratch Wars.
         </TextCard>
       <SkillsCard subheader='In Czech we say "Kolik jazyků znáš, tolikrát jsi člověkem." (How many languages you know, that many times you are a person.)' title="Languages">
@@ -31,7 +33,7 @@ export default function Page() {
             icon: (<ReactCountryFlag countryCode="cz" svg className="w-full h-full"/>),
             summary: "Native",
             description: (<>
-              I can also understand Slovak, since our languages are simmilar.
+              I can also understand Slovak, since our languages are similar.
             </>),
             delimiters: ["A1", "A2", "B1", "B2", "C1", "C2"],
             progress: 6
@@ -71,6 +73,56 @@ export default function Page() {
         }
         } />
       </SkillsCard>
+      <EducationCard entries={rajtslegrData.education.map((entry) => ({
+        institution: entry.institution,
+        program: entry.program,
+        period: entry.period,
+        content: <p>{entry.description}</p>
+      }))} />
+
+      <AchievementsCard entries={[
+        {
+          title: "Tour de App 2023",
+          emoji: "🥉",
+          description: <>Ahoj světě</>,
+          subtitle: "3rd place",
+          highlight: "bronze"
+        },
+        {
+          title: "Scratch Wars World Cup 2022",
+          emoji: "🏆",
+          description: <>Ahoj světě</>,
+          subtitle: "1st place",
+          highlight: "gold"
+        },
+        {
+          title: "Lego Robo League 2022",
+          emoji: "🏆",
+          description: <>Ahoj světě</>,
+          subtitle: "1st place",
+          highlight: "gold"
+        },
+        {
+          title: "Tour de App 2024",
+          emoji: "4️⃣",
+          description: <>Ahoj světě</>,
+          subtitle: "4th of 115"
+        },
+        {
+          title: "KSI 2025",
+          emoji: "✅",
+          description: <>Ahoj světě</>,
+          subtitle: "Successful",
+          highlight: "green"
+        },
+        {
+          title: "Tour de App 2024 CTF",
+          emoji: "🏆",
+          description: <>Ahoj světě</>,
+          subtitle: "1st place",
+          highlight: "gold"
+        }
+      ]} />
     </main>
   )
 }

@@ -8,7 +8,7 @@ type TextCardProps = {
 
 export default function TextCard({ title, children }: TextCardProps) {
     return (
-        <Card className="w-full max-w-xs gap-5 px-8 py-8 shadow-sm md:max-w-2xl">
+        <Card className="w-full max-w-xs gap-5 px-8 py-8 shadow-sm md:max-w-4xl">
             <div className="space-y-2">
                 <h2 className="text-2xl font-semibold">{title}</h2>
                 <p className="text-sm leading-relaxed text-muted-foreground">
