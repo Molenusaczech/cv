@@ -6,23 +6,7 @@ const rajtslegrData: ProfileData  = {
     lastName: "Rajtšlégr",
     motto: "Student @ FI MUNI, Ráječko board member",
     photo: "/img/photo.jpg",
-    profilePicture: "/img/pfp.png",
-    education: [
-        {
-            institution: "Faculty of Informatics, Masaryk University",
-            program: "Programming and Development",
-            period: "2025 - Ongoing",
-            description: <>
-                
-            </>
-        },
-        {
-            institution: "SPŠ Jedovnice",
-            program: "Information Technology",
-            period: "2021 - 2025",
-            description: ""
-        }
-    ]
+    profilePicture: "/img/pfp.png"
 };
 
 export default rajtslegrData;

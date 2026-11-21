@@ -16,7 +16,6 @@ type ProfileData = {
     motto: string,
     photo: string,
     profilePicture: string
-    education: EducationData[]
 }
 
 type EducationData = {

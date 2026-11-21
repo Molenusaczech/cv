@@ -22,63 +22,96 @@ export default function Page() {
       <Profile profile={rajtslegrData} />
       <TextCard
         title="About me"
-        >
-          I'm a 20 year old guy that loves to make stuff. Coding, organizing tournaments, videomaking, 3d printing etc.
-          My passion is gaming of all kinds. I especially like card games like Magic the Gathering and Scratch Wars.
-        </TextCard>
+      >
+        I'm a 20 year old guy that loves to make stuff. Coding, organizing tournaments, videomaking, 3d printing etc.
+        My passion is gaming of all kinds. I especially like card games like Magic the Gathering and Scratch Wars.
+      </TextCard>
       <SkillsCard subheader='In Czech we say "Kolik jazyků znáš, tolikrát jsi člověkem." (How many languages you know, that many times you are a person.)' title="Languages">
         <SkillBar skill={
           {
             name: "Czech",
-            icon: (<ReactCountryFlag countryCode="cz" svg className="w-full h-full"/>),
+            icon: (<ReactCountryFlag countryCode="cz" svg className="w-full h-full" />),
             summary: "Native",
             description: (<>
               I can also understand Slovak, since our languages are similar.
             </>),
             delimiters: ["A1", "A2", "B1", "B2", "C1", "C2"],
             progress: 6
-        }
+          }
         } />
         <SkillBar skill={
           {
             name: "English",
-            icon: (<ReactCountryFlag countryCode="gb" svg className="w-full h-full"/>),
+            icon: (<ReactCountryFlag countryCode="gb" svg className="w-full h-full" />),
             summary: "CAE (C1 Advanced) passed at C2 level (Grade A)",
-            description: (<Link href="" className={"w-full "+buttonVariants()}>
-                View certificate
+            description: (<Link href="" className={"w-full " + buttonVariants()}>
+              View certificate
             </Link>),
             delimiters: ["A1", "A2", "B1", "B2", "C1", "C2"],
             progress: 6
-        }
+          }
         } />
         <SkillBar skill={
           {
             name: "Russian",
-            icon: (<ReactCountryFlag countryCode="ru" svg className="w-full h-full"/>),
+            icon: (<ReactCountryFlag countryCode="ru" svg className="w-full h-full" />),
             summary: "A2 - Elementary knowledge",
             description: (<></>),
             delimiters: ["A1", "A2", "B1", "B2", "C1", "C2"],
             progress: 2
-        }
+          }
         } />
 
         <SkillBar skill={
           {
             name: "Japanese",
-            icon: (<ReactCountryFlag countryCode="jp" svg className="w-full h-full"/>),
+            icon: (<ReactCountryFlag countryCode="jp" svg className="w-full h-full" />),
             summary: "A1 - Beginner knowledge",
             description: (<></>),
             delimiters: ["A1", "A2", "B1", "B2", "C1", "C2"],
             progress: 1
-        }
+          }
         } />
       </SkillsCard>
-      <EducationCard entries={rajtslegrData.education.map((entry) => ({
-        institution: entry.institution,
-        program: entry.program,
-        period: entry.period,
-        content: <p>{entry.description}</p>
-      }))} />
+      <EducationCard entries={[
+        {
+          institution: "Faculty of Informatics, Masaryk University",
+          program: "Programming and Development",
+          period: "2025 - Ongoing",
+          content: <>
+
+          </>
+        },
+        {
+          institution: "SPŠ Jedovnice",
+          program: "Information Technology",
+          period: "2021 - 2025",
+          content: ""
+        }
+      ]} />
+
+      <EducationCard title="Work experience" entries={[
+        {
+          institution: "Obec Ráječko",
+          program: "Council member",
+          period: "2026 - ongoing",
+          content: <p>
+            Elected in 2026, member of the Finance Comittee and member of the Development and Information Technology comittee.
+            Running the official Instragram and Facebook pages.
+          </p>
+        },
+        {
+          institution: "Scratch Wars (Notre Game and Wormelen Group)",
+          program: "Community management",
+          period: "2021 - 2025",
+          content: <p>
+            Started out as a moderator, then became a tournament organizer, finally moved onto being an admin, which was in charge of tournaments and community management in general.
+            Onboarded 5+ tournament staff.
+            <br></br>
+            Volunteer position
+          </p>
+        }
+      ]} />
 
       <AchievementsCard entries={[
         {
