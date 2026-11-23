@@ -1,6 +1,8 @@
 import Profile from "@/components/cv/profile"
 import ThemeToggle from "@/components/theme-toggle"
 import SkillsCard, { SkillBar } from "@/components/cv/skillsCard"
+import SmallSkill from "@/components/cv/smallskill"
+import SmallSkillCard from "@/components/cv/smallskillcard"
 import TextCard from "@/components/cv/textCard"
 import EducationCard from "@/components/cv/educationCard"
 import rajtslegrData from "@/data/rajtslegr"
@@ -73,20 +75,194 @@ export default function Page() {
           }
         } />
       </SkillsCard>
+      <SmallSkillCard title="Skills" subheader="I love learning new stuff, so there is quite the bunch">
+        <SmallSkill skill={{
+          name: "JavaScript/TypeScript",
+          icon: <Code2 className="size-4" />,
+          summary: "Advanced",
+          description: <>
+            My most used language <br></br>
+            Used in Červené kombo and Tour de App 2024 <br></br>
+            This website is written in TypeScript!
+          </>,
+          progress: 0.8
+        }} />
+        <SmallSkill skill={{
+          name: "React",
+          icon: <Code2 className="size-4" />,
+          summary: "Intermediate",
+          progress: 0.5
+        }} />
+        <SmallSkill skill={{
+          name: "Next.js",
+          icon: <Code2 className="size-4" />,
+          summary: "Intermediate",
+          description: <>
+            Learned while creating Červené kombo. <br></br>
+            Used on recent projects (for example this website)
+          </>,
+          progress: 0.5
+        }} />
+        <SmallSkill skill={{
+          name: "Prisma ORM",
+          icon: <Code2 className="size-4" />,
+          summary: "Intermediate",
+          description: <>
+            Used for a few non-public prototypes
+          </>,
+          progress: 0.4
+        }} />
+        <SmallSkill skill={{
+          name: "Sequelize ORM",
+          icon: <Code2 className="size-4" />,
+          summary: "Beginner",
+          description: <>
+            Used for Tour de App 2024
+          </>,
+          progress: 0.2
+        }} />
+        <SmallSkill skill={{
+          name: "PHP",
+          icon: <Code2 className="size-4" />,
+          summary: "Advanced",
+          description: <>
+            My first web language <br></br>
+            Used in Tour de App 2023 and a couple smaller web projects.
+          </>,
+          progress: 0.5
+        }} />
+        <SmallSkill skill={{
+          name: "Python",
+          icon: <Code2 className="size-4" />,
+          summary: "Advanced",
+          description: <>
+            Main language for FI MUNI courses <br></br>
+          </>,
+          progress: 0.6
+        }} />
+        <SmallSkill skill={{
+          name: "Nette",
+          icon: <Code2 className="size-4" />,
+          summary: "Beginner",
+          description: <>
+            Used in Tour de App 2023
+          </>,
+          progress: 0.1
+        }} />
+        <SmallSkill skill={{
+          name: "Solidworks",
+          icon: <Code2 className="size-4" />,
+          summary: "Intermediate",
+          description: <>
+            Used in high school for CAD lessons and for 3D printing while I had the education licence
+          </>,
+          progress: 0.4
+        }} />
+        <SmallSkill skill={{
+          name: "3D Printing",
+          icon: <Code2 className="size-4" />,
+          summary: "Advanced",
+          description: <>
+            I own a Prusa Mini+, which I used to decorate the Ráječko christmas tree <br></br>
+            I'm especially interested in Print-in-Place models.
+          </>,
+          progress: 0.8
+        }} />
+        <SmallSkill skill={{
+          name: "Walking on crutches",
+          icon: <Code2 className="size-4" />,
+          summary: "Master",
+          description: <>
+            Walking on french crutches since I was little due to my disability <br></br>
+            I also know a few tricks ;)
+          </>,
+          progress: 1
+        }} />
+        <SmallSkill skill={{
+          name: "Microsoft office",
+          icon: <Code2 className="size-4" />,
+          summary: "Master",
+          description: <>
+            Using my excel skills to create spreadsheets for administrative of Ráječko <br></br>
+            Holder of ECDL for Word, Excel, Powerpoint and Cybersecurity
+          </>,
+          progress: 0.9
+        }} />
+        <SmallSkill skill={{
+          name: "Kotlin",
+          icon: <Code2 className="size-4" />,
+          summary: "Learning",
+          description: <>
+            Started learning it when I joined the GateCraft team, since the codebase is 100% kotlin.
+          </>,
+          progress: 0.1
+        }} />
+        <SmallSkill skill={{
+          name: "AI Assisted coding",
+          icon: <Code2 className="size-4" />,
+          summary: "Learning",
+          description: <>
+            Using GitHub copilot since launch, now as a harness with the OpenAI integration (A lot of this website has been written using it)
+          </>,
+          progress: 0.3
+        }} />
+        <SmallSkill skill={{
+          name: "Haskell",
+          icon: <Code2 className="size-4" />,
+          summary: "Beginner",
+          description: <>
+            Used in a University course.
+          </>,
+          progress: 0.2
+        }} />
+        <SmallSkill skill={{
+          name: "C",
+          icon: <Code2 className="size-4" />,
+          summary: "Beginner",
+          description: <>
+            Used in a University course.
+          </>,
+          progress: 0.1
+        }} />
+        <SmallSkill skill={{
+          name: ".NET",
+          icon: <Code2 className="size-4" />,
+          summary: "Beginner",
+          description: <>
+            Used in High school and a University course.
+          </>,
+          progress: 0.2
+        }} />
+        <SmallSkill skill={{
+          name: "PlantUML",
+          icon: <Code2 className="size-4" />,
+          summary: "Beginner",
+          description: <>
+            Used in a University course.
+          </>,
+          progress: 0.1
+        }} />
+        
+      </SmallSkillCard>
       <EducationCard entries={[
         {
           institution: "Faculty of Informatics, Masaryk University",
           program: "Programming and Development",
           period: "2025 - Ongoing",
           content: <>
-
+            Finished first year (2 semesters) with a 1.38 average (7th of 163 in programme) <br></br>
+            Attended some very interesting courses (for example Generative design programming)
           </>
         },
         {
           institution: "SPŠ Jedovnice",
           program: "Information Technology",
           period: "2021 - 2025",
-          content: ""
+          content: <>
+            Graduated on top of the class. Represented our school at many competitions (for example Tour de App). <br></br> 
+            Learned a lot about engineering and electronics apart from IT <br></br>
+            Member of the robotics team, where I developed a new line follower concept, which became the standard not long after.
+          </>
         }
       ]} />
 
@@ -102,7 +278,7 @@ export default function Page() {
         },
         {
           institution: "Scratch Wars (Notre Game and Wormelen Group)",
-          program: "Community management",
+          program: "Community manager",
           period: "2021 - 2025",
           content: <p>
             Started out as a moderator, then became a tournament organizer, finally moved onto being an admin, which was in charge of tournaments and community management in general.
@@ -117,7 +293,12 @@ export default function Page() {
         {
           title: "Tour de App 2023",
           emoji: "🥉",
-          description: <>Ahoj světě</>,
+          description: <>
+            Tour de App is a team web development competition for high school students. <br></br>
+            Worked with my classmate <Link className="underline text-blue-600 hover:text-blue-800 visited:text-purple-600" href={"https://github.com/Zero5G"}>Jakub Manoušek</Link> <br></br>
+            The competiton is not only about programming, since a big part of it is communication with a client. <br></br>
+            The final was a 2 day hackathon, which included building a new app from scratch and presenting it in front of a large audience.
+          </>,
           subtitle: "3rd place",
           highlight: "bronze"
         },

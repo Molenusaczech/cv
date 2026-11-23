@@ -96,13 +96,14 @@ function SkillBar({ skill }: SkillBarProps) {
     )
 }
 
-export default function SkillsCard({ title, subheader, children }: {
+export default function SkillsCard({ title, subheader, children, allowOverflow = false }: {
     title: string,
     subheader: string,
-    children: ReactNode
+    children: ReactNode,
+    allowOverflow?: boolean
 }) {
     return (
-        <Card className="w-full max-w-xs gap-5 px-6 py-6 shadow-sm md:max-w-4xl">
+        <Card className={`w-full max-w-xs gap-5 px-6 py-6 shadow-sm md:max-w-4xl ${allowOverflow ? "overflow-visible" : ""}`}>
             <div className="space-y-1">
                 <h2 className="text-2xl font-semibold">{title}</h2>
                 <p className="text-sm text-muted-foreground">
