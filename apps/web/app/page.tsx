@@ -4,11 +4,13 @@ import SkillsCard, { SkillBar } from "@/components/cv/skillsCard"
 import SmallSkill from "@/components/cv/smallskill"
 import SmallSkillCard from "@/components/cv/smallskillcard"
 import TextCard from "@/components/cv/textCard"
+import ProjectCard from "@/components/cv/projectCard"
 import EducationCard from "@/components/cv/educationCard"
 import rajtslegrData from "@/data/rajtslegr"
 import { Button, buttonVariants } from "@workspace/ui/components/button"
 import {
   Accessibility, Atom, Binary, Box, Braces, Code2, CodeXml, Database,
+  Drone,
   FileCode2, FileSpreadsheet, Laptop, Network, PanelsTopLeft, Printer,
   Server, Sparkles, Terminal, Workflow,
 } from "lucide-react"
@@ -251,6 +253,17 @@ export default function Page() {
           </>,
           progress: 0.1
         }} />
+        <SmallSkill skill={{
+          name: "Drone photography",
+          icon: <Drone className="size-4" />,
+          summary: "Advanced",
+          description: <>
+            I have a A0 licence, so I can fly camera drones under 249g. <br></br>
+            I'm taking pictures and videos of various places and events in Ráječko to later publish on official media. <br></br>
+            One of my pictures was published in <TextLink href="https://my-face.cz/">MyFace</TextLink>
+          </>,
+          progress: 0.8
+        }} />
 
       </SmallSkillCard>
       <EducationCard entries={[
@@ -367,6 +380,157 @@ export default function Page() {
           </>,
           subtitle: "1st place",
           highlight: "gold"
+        }
+      ]} />
+      <ProjectCard projects={[
+        {
+          image: "/img/pfp.png",
+          imageAlt: "Portrait used on this CV website",
+          title: "CV website",
+          subtitle: "This website",
+          description: <>
+            A simple portfolio website. First project where I tried to use AI to its fullest.
+          </>,
+          technologies: [
+            { name: "Next.js", variant: "default" },
+            { name: "React", variant: "secondary" },
+            { name: "TypeScript", variant: "outline" },
+            { name: "Tailwind CSS", variant: "outline" },
+            { name: "Vercel", variant: "outline" },
+            { name: "AI-assisted coding", variant: "outline" }
+          ],
+          webUrl: "https://cv.mole.lol/",
+          githubUrl: "https://github.com/Molenusaczech/cv"
+        },
+        {
+          image: "/img/projects/gatecraftWiki.png",
+          imageAlt: "Gatecraft wiki",
+          title: "GateCraft wiki",
+          subtitle: "Content and documentation writing",
+          description: <>
+            Documentation for the Minecraft server <TextLink href="https://gatecraft.eu/">GateCraft</TextLink>. I have written 100+ pages from guides to location descriptions. Worked with the developers and community to make it as accurate as possible. Currently only available in Czech, but we are working on an English translation.
+          </>,
+          technologies: [
+            { name: "Writing", variant: "default" },
+            { name: "Teamwork", variant: "secondary" },
+            { name: "Documentation", variant: "outline" },
+          ],
+          webUrl: "https://gatecraft.eu/cz/wiki/hlavni-stranky/prehled"
+        },
+        {
+          image: "/img/projects/cerveneKombo.png",
+          imageAlt: "Portrait used on this CV website",
+          title: "Červené kombo",
+          subtitle: "Fullstack website with various Scratch Wars tools",
+          description: <>
+            This website allowed players to lookup the stats of their cards, which was impossible previously, since the API was undocumented. I later added the ability to scrape matches from Scratch Wars online and replay them. The interface was originally done using Material UI, then I redone it using v0 by Vercel.
+            <br></br>
+            This website had 100+ users monthtly at it's peak.
+            <br></br>
+            Unfortunately most of it is broken, since the APIs it depended on no longer work.
+          </>,
+          technologies: [
+            { name: "Next.js", variant: "default" },
+            { name: "React", variant: "secondary" },
+            { name: "TypeScript", variant: "outline" },
+            { name: "Tailwind CSS", variant: "outline" },
+            { name: "Vercel", variant: "outline" },
+            { name: "API integration", variant: "outline" },
+            { name: "Data analysis", variant: "outline" }
+          ],
+          webUrl: "https://ck.mole.lol/",
+          githubUrl: "https://github.com/Molenusaczech/CerveneKombo"
+        },
+        {
+          image: "/img/projects/gatecraftWiki.png",
+          imageAlt: "Gatecraft website",
+          title: "GateCraft",
+          subtitle: "Minecraft server development",
+          description: <>
+            <TextLink href="https://gatecraft.eu/">GateCraft</TextLink> is one of the longest running Czech Minecraft servers. It has been running on the same map since 2011.
+            More than 10 000 players have played on it since.
+            <br></br>
+            There is a lot of custom plugins written in Kotlin, but we also use stock ones with a custom config where needed.
+            <br></br>
+            I mostly work on designing and creating dungeons, bosses and items.
+          </>,
+          technologies: [
+            { name: "Minecraft", variant: "default" },
+            { name: "Kotlin", variant: "secondary" },
+            { name: "MythicMobs", variant: "outline" },
+            { name: "Linux", variant: "outline" },
+            { name: "Game design", variant: "outline" },
+          ],
+          webUrl: "https://gatecraft.eu"
+        },
+        {
+          image: "/img/projects/pano.jpg",
+          imageAlt: "Panorama of Ráječko",
+          title: "Panoview",
+          subtitle: "Web 360° photo viewer",
+          description: <>
+            I had some 360° photos from my drone and couldn't find a place to host them, so I created this website and embeded it onto the Ráječko website.
+          </>,
+          technologies: [
+            { name: "Next.js", variant: "default" },
+            { name: "React", variant: "secondary" },
+            { name: "TypeScript", variant: "outline" },
+            { name: "Tailwind CSS", variant: "outline" },
+            { name: "three.js", variant: "outline" },
+            { name: "Drone photography", variant: "outline" },
+          ],
+          webUrl: "https://pano.mole.lol/",
+          githubUrl: "https://github.com/molenusaczech/panoview"
+        },
+        {
+          image: "/img/projects/fiar.png",
+          imageAlt: "Five-in-a-row game",
+          title: "Five-in-a-row",
+          subtitle: "Fullstack gomoku/five-in-a-row web game",
+          description: <>
+            My first bigger web project. It has user registrations, matches with SWAP 2 opening and statistics. <br></br>
+            I made it because back then I didn't know of any public Five-in-a-row websites with SWAP 2 rule.
+          </>,
+          technologies: [
+            { name: "PHP", variant: "default" },
+            { name: "JavaScript", variant: "secondary" },
+            { name: "CSS", variant: "outline" },
+            { name: "HTML", variant: "outline" }
+          ],
+          githubUrl: "https://github.com/Molenusaczech/five-in-a-row"
+        },
+        {
+          image: "/img/projects/simpleModel.png",
+          imageAlt: "SimpleModel interface",
+          title: "SimpleModel",
+          subtitle: "Web-based 3D model editor prototype",
+          description: <>
+            A simple web app to edit 3D models for 3D printing. The vision was something anyone could use to customize/slighty edit preset models.
+          </>,
+          technologies: [
+            { name: "JavaScript", variant: "default" },
+            { name: "Vite", variant: "secondary" },
+            { name: "Css", variant: "outline" },
+            { name: "HTML", variant: "outline" }
+          ],
+          githubUrl: "https://github.com/Molenusaczech/simpleModel",
+          webUrl: "https://simple-model.vercel.app/"
+        },
+        {
+          image: "/img/projects/molemoji.gif",
+          imageAlt: "MoleMoji interface",
+          title: "MoleMoji",
+          subtitle: "Electron app to quickly copy images as stickers/emoji",
+          description: <>
+            A small prototype I made when my Discord Nitro expired and I wanted the ability to send stickers back without paying.
+          </>,
+          technologies: [
+            { name: "JavaScript", variant: "default" },
+            { name: "Electron", variant: "secondary" },
+            { name: "CSS", variant: "outline" },
+            { name: "HTML", variant: "outline" }
+          ],
+          githubUrl: "https://github.com/Molenusaczech/MoleMoji"
         }
       ]} />
     </main>
