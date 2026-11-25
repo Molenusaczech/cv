@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Daniel Rajtšlégr",
   openGraph: {
     title: "Daniel Rajtšlégr",
-    description: "I'm a 20 year old guy that loves to make stuff. Coding, organizing tournaments, videomaking, 3d printing etc. My passion is gaming of all kinds. I especially like card games like Magic the Gathering and Scratch Wars. "
+    description: "I'm a 20-year-old guy who loves making things: coding, organizing tournaments, making videos, 3D printing, etc. My passion is gaming of all kinds. I especially like card games such as Magic: The Gathering and Scratch Wars."
   }
 }
 
@@ -34,10 +34,10 @@ export default function Page() {
       <TextCard
         title="About me"
       >
-        I'm a 20 year old guy that loves to make stuff. Coding, organizing tournaments, videomaking, 3d printing etc.
-        My passion is gaming of all kinds. I especially like card games like Magic the Gathering and Scratch Wars.
+        I'm a 20-year-old guy who loves making things: coding, organizing tournaments, making videos, 3D printing, etc.
+        My passion is gaming of all kinds. I especially like card games such as Magic: The Gathering and Scratch Wars.
       </TextCard>
-      <SkillsCard subheader='In Czech we say "Kolik jazyků znáš, tolikrát jsi člověkem." (How many languages you know, that many times you are a person.)' title="Languages">
+      <SkillsCard subheader='In Czech, we say "Kolik jazyků znáš, tolikrát jsi člověkem." (The more languages you know, the more times you are a person.)' title="Languages">
         <SkillBar skill={
           {
             name: "Czech",
@@ -84,13 +84,13 @@ export default function Page() {
           }
         } />
       </SkillsCard>
-      <SmallSkillCard title="Skills" subheader="I love learning new stuff, so there is quite the bunch">
+      <SmallSkillCard title="Skills" subheader="I love learning new things, so I have quite a few skills.">
         <SmallSkill skill={{
           name: "JavaScript/TypeScript",
           icon: <FileCode2 className="size-4" />,
           summary: "Advanced",
           description: <>
-            My most used language <br></br>
+            My most-used language. <br></br>
             Used in Červené kombo and Tour de App 2024 <br></br>
             This website is written in TypeScript!
           </>,
@@ -108,7 +108,7 @@ export default function Page() {
           summary: "Intermediate",
           description: <>
             Learned while creating Červené kombo. <br></br>
-            Used on recent projects (for example this website)
+            Used in recent projects, including this website.
           </>,
           progress: 0.5
         }} />
@@ -117,7 +117,7 @@ export default function Page() {
           icon: <Database className="size-4" />,
           summary: "Intermediate",
           description: <>
-            Used for a few non-public prototypes
+            Used for a few non-public prototypes.
           </>,
           progress: 0.4
         }} />
@@ -126,7 +126,7 @@ export default function Page() {
           icon: <Workflow className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used for Tour de App 2024
+            Used for Tour de App 2024.
           </>,
           progress: 0.2
         }} />
@@ -145,7 +145,7 @@ export default function Page() {
           icon: <Terminal className="size-4" />,
           summary: "Advanced",
           description: <>
-            Main language for FI MUNI courses <br></br>
+            Main language for FI MUNI courses. <br></br>
           </>,
           progress: 0.6
         }} />
@@ -154,7 +154,7 @@ export default function Page() {
           icon: <Server className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used in Tour de App 2023
+            Used in Tour de App 2023.
           </>,
           progress: 0.1
         }} />
@@ -163,7 +163,7 @@ export default function Page() {
           icon: <Box className="size-4" />,
           summary: "Intermediate",
           description: <>
-            Used in high school for CAD lessons and for 3D printing while I had the education licence
+            Used in high school for CAD lessons and 3D printing while I had an educational license.
           </>,
           progress: 0.4
         }} />
@@ -172,7 +172,7 @@ export default function Page() {
           icon: <Printer className="size-4" />,
           summary: "Advanced",
           description: <>
-            I own a Prusa Mini+, which I used to decorate the Ráječko christmas tree <br></br>
+            I own a Prusa Mini+, which I used to decorate the Ráječko Christmas tree. <br></br>
             I'm especially interested in Print-in-Place models.
           </>,
           progress: 0.8
@@ -182,18 +182,18 @@ export default function Page() {
           icon: <Accessibility className="size-4" />,
           summary: "Master",
           description: <>
-            Walking on french crutches since I was little due to my disability <br></br>
-            I also know a few tricks ;)
+            I've been walking on French crutches since I was little because of my disability. <br></br>
+            I also know a few tricks. ;)
           </>,
           progress: 1
         }} />
         <SmallSkill skill={{
-          name: "Microsoft office",
+          name: "Microsoft Office",
           icon: <FileSpreadsheet className="size-4" />,
           summary: "Master",
           description: <>
-            Using my excel skills to create spreadsheets for administrative of Ráječko <br></br>
-            Holder of ECDL for Word, Excel, Powerpoint and Cybersecurity
+            Using my Excel skills to create administrative spreadsheets for Ráječko. <br></br>
+            ECDL certificate holder in Word, Excel, PowerPoint, and cybersecurity.
           </>,
           progress: 0.9
         }} />
@@ -202,16 +202,16 @@ export default function Page() {
           icon: <Braces className="size-4" />,
           summary: "Learning",
           description: <>
-            Started learning it when I joined the GateCraft team, since the codebase is 100% kotlin.
+            Started learning it when I joined the GateCraft team, as the codebase is written entirely in Kotlin.
           </>,
           progress: 0.1
         }} />
         <SmallSkill skill={{
-          name: "AI Assisted coding",
+          name: "AI-assisted coding",
           icon: <Sparkles className="size-4" />,
           summary: "Learning",
           description: <>
-            Using GitHub copilot since launch, now as a harness with the OpenAI integration (A lot of this website has been written using it)
+            I've used GitHub Copilot since its launch, and now use it as a harness with the OpenAI integration. A lot of this website was written with it.
           </>,
           progress: 0.3
         }} />
@@ -220,7 +220,7 @@ export default function Page() {
           icon: <Binary className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used in a University course.
+            Used in a university course.
           </>,
           progress: 0.2
         }} />
@@ -229,7 +229,7 @@ export default function Page() {
           icon: <Code2 className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used in a University course.
+            Used in a university course.
           </>,
           progress: 0.1
         }} />
@@ -238,7 +238,7 @@ export default function Page() {
           icon: <Laptop className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used in High school and a University course.
+            Used in high school and a university course.
           </>,
           progress: 0.2
         }} />
@@ -247,7 +247,7 @@ export default function Page() {
           icon: <Network className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used in a University course.
+            Used in a university course.
           </>,
           progress: 0.1
         }} />
@@ -259,8 +259,8 @@ export default function Page() {
           program: "Programming and Development",
           period: "2025 - Ongoing",
           content: <>
-            Finished first year (2 semesters) with a 1.38 average (7th of 163 in programme) <br></br>
-            Attended some very interesting courses (for example Generative design programming)
+            Finished my first year (two semesters) with a 1.38 average (7th out of 163 students in the program). <br></br>
+            Attended some very interesting courses, such as Generative Design Programming.
           </>
         },
         {
@@ -268,10 +268,10 @@ export default function Page() {
           program: "Information Technology",
           period: "2021 - 2025",
           content: <>
-            Graduated on top of the class. Represented our school at many competitions (for example Tour de App). <br></br>
-            Learned a lot about engineering and electronics apart from IT <br></br>
-            Member of the robotics team, where I developed a new line follower concept, which became the standard not long after. <br></br>
-            1.00 average on Maturita exam. Passed expanded math (25 points, 65.7 percentile), normal math (44 points, 92.5 percentile) and czech (43 points, 86.5 percentile).
+            Graduated at the top of my class. Represented our school in many competitions, such as Tour de App. <br></br>
+            Learned a lot about engineering and electronics in addition to IT. <br></br>
+            Was a member of the robotics team, where I developed a new line-following concept that soon became the standard. <br></br>
+            Earned a 1.00 average on the Maturita exam. Passed advanced mathematics (25 points, 65.7th percentile), standard mathematics (44 points, 92.5th percentile), and Czech (43 points, 86.5th percentile).
           </>
         }
       ]} />
@@ -282,8 +282,8 @@ export default function Page() {
           program: "Council member",
           period: "2026 - ongoing",
           content: <p>
-            Elected in 2026, member of the Finance Comittee and member of the Development and Information Technology comittee.
-            Running the official Instragram, Facebook and web pages. 
+            Elected in 2026. Member of the Finance Committee and the Development and Information Technology Committee.
+            Manage the official Instagram, Facebook, and website.
           </p>
         },
         {
@@ -291,8 +291,8 @@ export default function Page() {
           program: "Community manager",
           period: "2021 - 2025",
           content: <p>
-            Started out as a moderator, then became a tournament organizer, finally moved onto being an admin, which was in charge of tournaments and community management in general.
-            Onboarded 5+ tournament staff.
+            Started as a moderator, became a tournament organizer, and eventually moved into an administrator role, overseeing tournaments and community management.
+            Onboarded more than five tournament staff members. Under my leadership, the average tournament player count increased by 600%.
             <br></br>
             Volunteer position
           </p>
@@ -306,8 +306,8 @@ export default function Page() {
           description: <>
             <TextLink href="https://tourdeapp.com/">Tour de App</TextLink> is a team web development competition for high school students. <br></br>
             Worked with my classmate <TextLink href="https://github.com/Zero5G">Jakub Manoušek</TextLink> <br></br>
-            The competiton is not only about programming, since a big part of it is communication with a client. <br></br>
-            The final was a 2 day hackathon, which included building a new app from scratch and presenting it in front of a large audience.
+            The competition is not only about programming, as communicating with a client is a big part of it. <br></br>
+            The final was a two-day hackathon that involved building a new app from scratch and presenting it to a large audience.
           </>,
           subtitle: "3rd place",
           highlight: "bronze"
@@ -316,8 +316,8 @@ export default function Page() {
           title: "Scratch Wars World Cup 2022",
           emoji: "🏆",
           description: <>
-            Scratch Wars was a czech TCG, which I have been playing since 2017. <br></br>
-            Won many tournaments in several cities. After 5 years of ending up top 10 on world cups it finally paid off.
+            Scratch Wars was a Czech trading card game that I had been playing since 2017. <br></br>
+            I won many tournaments in several cities. After five years of placing in the top 10 at the World Cups, my efforts finally paid off.
           </>,
           subtitle: "1st place",
           highlight: "gold"
@@ -326,8 +326,8 @@ export default function Page() {
           title: "Lego Robo League 2022",
           emoji: "🏆",
           description: <>
-            <TextLink href="https://robotikahrave.cz/robo-lego-liga/">Lego Robo League</TextLink> is a league composed of several robotics competitions across Czechia. <br></br>
-            I have perfected the moving sensor line follower concept, which consists of a single sensor on a moving probe, which turned out to be much faster than static sensor PID.
+            <TextLink href="https://robotikahrave.cz/robo-lego-liga/">Lego Robo League</TextLink> is a league made up of several robotics competitions across Czechia. <br></br>
+            I perfected a moving-sensor line-following concept that uses a single sensor on a moving probe. It proved much faster than a static-sensor PID system.
           </>,
           subtitle: "1st place",
           highlight: "gold"
@@ -338,11 +338,11 @@ export default function Page() {
           description: <>
             <TextLink href="https://tourdeapp.com/">Tour de App</TextLink> is a team web development competition for high school students. <br></br>
             Worked with my classmate <TextLink href="https://github.com/TZT868">Maxim Vašíček</TextLink> and friend <TextLink href="https://strizova.com/">Eva Střížová</TextLink> <br></br>
-            The competiton is not only about programming, since a big part of it is communication with a client. <br></br>
-            The final was a 3 day hackathon, which included building a new app from scratch and presenting it in front of a large audience.
-            This year the theme of the final was AI, which was quite difficult, since AI was not that powerful yet. <br></br>
+            The competition is not only about programming, as communicating with a client is a big part of it. <br></br>
+            The final was a three-day hackathon that involved building a new app from scratch and presenting it to a large audience.
+            That year, the theme of the final was AI, which made the challenge quite difficult because AI was not yet very powerful. <br></br>
             <TextLink href="https://robotikahrave.cz/2024/04/tour-de-app-2024/">
-              Article I wrote about it for our school (Czech only)
+              Article I wrote about it for our school (in Czech only)
             </TextLink>
           </>,
           subtitle: "4th of 115"
@@ -352,7 +352,7 @@ export default function Page() {
           emoji: "✅",
           description: <>
             <TextLink href="https://ksi.fi.muni.cz/">KSI</TextLink> is an individual algorithm competition organised by the students of FI MUNI. <br></br>
-            Each year has 4 themed blocks. This year it was: Data Structures, Functional programming, OOP and Assembly
+            Each year has four themed blocks. This year, they were data structures, functional programming, OOP, and assembly.
           </>,
           subtitle: "Successful",
           highlight: "green"
@@ -361,9 +361,9 @@ export default function Page() {
           title: "Tour de App 2024 CTF",
           emoji: "🏆",
           description: <>
-            A puzzle and cybersecurity sidecompetition running alongside <TextLink href="https://tourdeapp.com/">Tour de App</TextLink> 2024. <br></br>
-            It consisted of 20 flags (15 online and 5 in-person at the hackathon). Our team found 12 of them, which earned us the first place.
-            Some interesting ones included hexadecimal sudoku and a sign on a Minecraft server, which you could find by nmap.
+            A puzzle and cybersecurity side competition held alongside <TextLink href="https://tourdeapp.com/">Tour de App</TextLink> 2024. <br></br>
+            It consisted of 20 flags (15 online and 5 in person at the hackathon). Our team found 12 of them, earning us first place.
+            Some interesting challenges included hexadecimal Sudoku and a sign on a Minecraft server that could be found using Nmap.
           </>,
           subtitle: "1st place",
           highlight: "gold"
