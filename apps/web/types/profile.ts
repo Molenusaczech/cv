@@ -15,7 +15,11 @@ type ProfileData = {
     lastName: string,
     motto: string,
     photo: string,
-    profilePicture: string
+    profilePicture: string,
+    githubUrl?: string,
+    linkedinUrl?: string,
+    email?: string,
+    phone?: string
 }
 
 type EducationData = {

@@ -1,6 +1,7 @@
 import Image from "next/image"
 import type { ProfileData } from "@/types/profile"
 import { Card } from "@workspace/ui/components/card"
+import { Mail, Phone } from "lucide-react"
 
 export default function Profile({ profile }: { profile: ProfileData }) {
     const fullName = `${profile.firstName} ${profile.lastName}`
@@ -38,6 +39,32 @@ export default function Profile({ profile }: { profile: ProfileData }) {
                 <p className="text-sm leading-relaxed text-muted-foreground">
                     {profile.motto}
                 </p>
+                <nav aria-label="Contact links" className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm md:justify-start">
+                    {profile.githubUrl && (
+                        <a className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground" href={profile.githubUrl} rel="noreferrer" target="_blank">
+                            <Image alt="" aria-hidden="true" className="size-4 dark:invert" height={16} src="/img/github.svg" width={16} />
+                            GitHub
+                        </a>
+                    )}
+                    {profile.linkedinUrl && (
+                        <a className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground" href={profile.linkedinUrl} rel="noreferrer" target="_blank">
+                            <Image alt="" aria-hidden="true" className="size-4 dark:invert" height={16} src="/img/icons/LinkedIn.svg" width={16} />
+                            LinkedIn
+                        </a>
+                    )}
+                    {profile.email && (
+                        <a className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground" href={`mailto:${profile.email}`}>
+                            <Mail aria-hidden="true" className="size-4" />
+                            {profile.email}
+                        </a>
+                    )}
+                    {profile.phone && (
+                        <a className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground" href={`tel:${profile.phone}`}>
+                            <Phone aria-hidden="true" className="size-4" />
+                            {profile.phone}
+                        </a>
+                    )}
+                </nav>
             </div>
         </Card>
     )
