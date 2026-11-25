@@ -71,7 +71,7 @@ export function AchievementCardEntry({
         </>
     )
 
-    const className = `relative rounded-lg border p-5 ${clickable ? "pb-9 text-center transition-[grid-column,background-color,border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-muted/60 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring group" : "text-center"} ${isSelected ? "col-span-full" : ""} ${entry.highlight ? highlightStyles[entry.highlight] : "bg-background/50"}`
+    const className = `relative rounded-lg border p-5 ${clickable ? "pb-9 text-center transition-[background-color,border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-primary/40 hover:bg-muted/60 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring group" : "text-center"} ${entry.highlight ? highlightStyles[entry.highlight] : "bg-background/50"}`
 
     if (!clickable) {
         return <div className={className}>{content}</div>
@@ -92,30 +92,53 @@ export function AchievementCardEntry({
 
 export default function AchievementsCard({ entries, title = "Achievements" }: AchievementsCardProps) {
     const [selected, setSelected] = useState<string | null>(null)
-    const gridColumns = entries.length < 2
+    const selectedIndex = entries.findIndex((entry, index) => `${entry.title}-${index}` === selected)
+    const gridColumns = (count: number) => count < 2
         ? "grid-cols-1"
-        : entries.length < 3
+        : count === 4
+            ? "grid-cols-1 sm:grid-cols-2 md:grid-cols-2"
+        : count < 3
             ? "grid-cols-1 sm:grid-cols-2"
             : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+    const renderEntries = (items: AchievementEntry[], startIndex: number) => items.map((entry, offset) => {
+        const index = startIndex + offset
+        const itemId = `${entry.title}-${index}`
+
+        return (
+            <AchievementCardEntry
+                key={itemId}
+                entry={entry}
+                index={index}
+                isSelected={selected === itemId}
+                onSelect={() => setSelected(selected === itemId ? null : itemId)}
+            />
+        )
+    })
 
     return (
         <Card className="w-full max-w-xs gap-5 px-6 py-6 shadow-sm md:max-w-4xl">
             <h2 className="text-2xl font-semibold">{title}</h2>
-            <div className={`grid ${gridColumns} gap-3`}>
-                {entries.map((entry, index) => {
-                    const itemId = `${entry.title}-${index}`
-
-                    return (
-                        <AchievementCardEntry
-                            key={itemId}
-                            entry={entry}
-                            index={index}
-                            isSelected={selected === itemId}
-                            onSelect={() => setSelected(selected === itemId ? null : itemId)}
-                        />
-                    )
-                })}
-            </div>
+            {selectedIndex < 0 ? (
+                <div className={`grid ${gridColumns(entries.length)} gap-3`}>
+                    {renderEntries(entries, 0)}
+                </div>
+            ) : (
+                <div className="flex flex-col gap-3">
+                    {selectedIndex > 0 && (
+                        <div className={`grid ${gridColumns(selectedIndex)} gap-3`}>
+                            {renderEntries(entries.slice(0, selectedIndex), 0)}
+                        </div>
+                    )}
+                    <div className="grid grid-cols-1 gap-3">
+                        {renderEntries(entries.slice(selectedIndex, selectedIndex + 1), selectedIndex)}
+                    </div>
+                    {selectedIndex < entries.length - 1 && (
+                        <div className={`grid ${gridColumns(entries.length - selectedIndex - 1)} gap-3`}>
+                            {renderEntries(entries.slice(selectedIndex + 1), selectedIndex + 1)}
+                        </div>
+                    )}
+                </div>
+            )}
         </Card>
     )
 }
