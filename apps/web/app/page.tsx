@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Daniel Rajtšlégr",
   openGraph: {
     title: "Daniel Rajtšlégr",
-    description: "I'm a 20-year-old guy who loves making things: coding, organizing tournaments, making videos, 3D printing, etc. My passion is gaming of all kinds. I especially like card games such as Magic: The Gathering and Scratch Wars."
+    description: "I'm a 20-year-old who loves making things, including coding, organizing tournaments, making videos, and 3D printing. I'm passionate about gaming, especially card games such as Magic: The Gathering and Scratch Wars."
   }
 }
 
@@ -36,8 +36,8 @@ export default function Page() {
       <TextCard
         title="About me"
       >
-        I'm a 20-year-old guy who loves making things: coding, organizing tournaments, making videos, 3D printing, etc.
-        My passion is gaming of all kinds. I especially like card games such as Magic: The Gathering and Scratch Wars.
+        I'm a 20-year-old who loves making things, including coding, organizing tournaments, making videos, and 3D printing.
+        I'm passionate about gaming, especially card games such as Magic: The Gathering and Scratch Wars.
       </TextCard>
       <SkillsCard subheader='In Czech, we say "Kolik jazyků znáš, tolikrát jsi člověkem." (The more languages you know, the more times you are a person.)' title="Languages">
         <SkillBar skill={
@@ -68,7 +68,7 @@ export default function Page() {
           {
             name: "Russian",
             icon: (<ReactCountryFlag countryCode="ru" svg className="w-full h-full" />),
-            summary: "A2 - Elementary knowledge",
+            summary: "A2 – Elementary proficiency",
             description: (<></>),
             delimiters: ["A1", "A2", "B1", "B2", "C1", "C2"],
             progress: 2
@@ -79,7 +79,7 @@ export default function Page() {
           {
             name: "Japanese",
             icon: (<ReactCountryFlag countryCode="jp" svg className="w-full h-full" />),
-            summary: "A1 - Beginner knowledge",
+            summary: "A1 – Beginner proficiency",
             description: (<></>),
             delimiters: ["A1", "A2", "B1", "B2", "C1", "C2"],
             progress: 1
@@ -110,7 +110,7 @@ export default function Page() {
           summary: "Intermediate",
           description: <>
             Learned while creating Červené kombo. <br></br>
-            Used in recent projects, including this website.
+            I've used it in recent projects, including this website.
           </>,
           progress: 0.5
         }} />
@@ -119,7 +119,7 @@ export default function Page() {
           icon: <Database className="size-4" />,
           summary: "Intermediate",
           description: <>
-            Used for a few non-public prototypes.
+            I've used it for a few private prototypes.
           </>,
           progress: 0.4
         }} />
@@ -128,7 +128,7 @@ export default function Page() {
           icon: <Workflow className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used for Tour de App 2024.
+            I used it for Tour de App 2024.
           </>,
           progress: 0.2
         }} />
@@ -137,8 +137,8 @@ export default function Page() {
           icon: <CodeXml className="size-4" />,
           summary: "Advanced",
           description: <>
-            My first web language <br></br>
-            Used in Tour de App 2023 and a couple smaller web projects.
+            My first web programming language. <br></br>
+            Used in Tour de App 2023 and a couple of smaller web projects.
           </>,
           progress: 0.5
         }} />
@@ -147,7 +147,7 @@ export default function Page() {
           icon: <Terminal className="size-4" />,
           summary: "Advanced",
           description: <>
-            Main language for FI MUNI courses. <br></br>
+            My main language for FI MUNI courses. <br></br>
           </>,
           progress: 0.6
         }} />
@@ -156,7 +156,7 @@ export default function Page() {
           icon: <Server className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used in Tour de App 2023.
+            I used it for Tour de App 2023.
           </>,
           progress: 0.1
         }} />
@@ -165,7 +165,7 @@ export default function Page() {
           icon: <Box className="size-4" />,
           summary: "Intermediate",
           description: <>
-            Used in high school for CAD lessons and 3D printing while I had an educational license.
+            I used it for CAD classes and 3D printing in high school while I had an educational licence.
           </>,
           progress: 0.4
         }} />
@@ -204,7 +204,7 @@ export default function Page() {
           icon: <Braces className="size-4" />,
           summary: "Learning",
           description: <>
-            Started learning it when I joined the GateCraft team, as the codebase is written entirely in Kotlin.
+            I started learning it when I joined the GateCraft team because the codebase is written entirely in Kotlin.
           </>,
           progress: 0.1
         }} />
@@ -213,7 +213,7 @@ export default function Page() {
           icon: <Sparkles className="size-4" />,
           summary: "Learning",
           description: <>
-            I've used GitHub Copilot since its launch, and now use it as a harness with the OpenAI integration. A lot of this website was written with it.
+            I've used GitHub Copilot since its launch and now use it as a harness with the OpenAI integration. Much of this website was written with its help.
           </>,
           progress: 0.3
         }} />
@@ -222,7 +222,7 @@ export default function Page() {
           icon: <Binary className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used in a university course.
+            I used it in a university course.
           </>,
           progress: 0.2
         }} />
@@ -231,7 +231,7 @@ export default function Page() {
           icon: <Code2 className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used in a university course.
+            I used it in a university course.
           </>,
           progress: 0.1
         }} />
@@ -240,7 +240,7 @@ export default function Page() {
           icon: <Laptop className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used in high school and a university course.
+            I used it in high school and in a university course.
           </>,
           progress: 0.2
         }} />
@@ -249,7 +249,7 @@ export default function Page() {
           icon: <Network className="size-4" />,
           summary: "Beginner",
           description: <>
-            Used in a university course.
+            I used it in a university course.
           </>,
           progress: 0.1
         }} />
@@ -258,9 +258,9 @@ export default function Page() {
           icon: <Drone className="size-4" />,
           summary: "Advanced",
           description: <>
-            I have a A0 licence, so I can fly camera drones under 249g. <br></br>
-            I'm taking pictures and videos of various places and events in Ráječko to later publish on official media. <br></br>
-            One of my pictures was published in <TextLink href="https://my-face.cz/">MyFace</TextLink>
+            I have an A0 licence, which allows me to fly camera drones weighing under 249 g. <br></br>
+            I take pictures and videos of various places and events in Ráječko to publish on its official media channels. <br></br>
+            One of my pictures was published by <TextLink href="https://my-face.cz/">MyFace</TextLink>.
           </>,
           progress: 0.8
         }} />
@@ -272,8 +272,8 @@ export default function Page() {
           program: "Programming and Development",
           period: "2025 - Ongoing",
           content: <>
-            Finished my first year (two semesters) with a 1.38 average (7th out of 163 students in the program). <br></br>
-            Attended some very interesting courses, such as Generative Design Programming.
+            Completed my first year (two semesters) with a 1.38 average, ranking 7th out of 163 students in the program. <br></br>
+            Took several interesting courses, including Generative Design Programming.
           </>
         },
         {
@@ -281,9 +281,9 @@ export default function Page() {
           program: "Information Technology",
           period: "2021 - 2025",
           content: <>
-            Graduated at the top of my class. Represented our school in many competitions, such as Tour de App. <br></br>
-            Learned a lot about engineering and electronics in addition to IT. <br></br>
-            Was a member of the robotics team, where I developed a new line-following concept that soon became the standard. <br></br>
+            Graduated at the top of my class and represented our school in several competitions, including Tour de App. <br></br>
+            Learned about engineering and electronics in addition to IT. <br></br>
+            As a member of the robotics team, I developed a new line-following concept that soon became the standard. <br></br>
             Earned a 1.00 average on the Maturita exam. Passed advanced mathematics (25 points, 65.7th percentile), standard mathematics (44 points, 92.5th percentile), and Czech (43 points, 86.5th percentile).
           </>
         }
@@ -295,8 +295,8 @@ export default function Page() {
           program: "Council member",
           period: "2026 - ongoing",
           content: <p>
-            Elected in 2026. Member of the Finance Committee and the Development and Information Technology Committee.
-            Manage the official Instagram, Facebook, and website.
+            Elected in 2026. I serve on the Finance Committee and the Development and Information Technology Committee.
+            I manage the municipality's official Instagram account, Facebook page, and website.
           </p>
         },
         {
@@ -304,8 +304,8 @@ export default function Page() {
           program: "Community manager",
           period: "2021 - 2025",
           content: <p>
-            Started as a moderator, became a tournament organizer, and eventually moved into an administrator role, overseeing tournaments and community management.
-            Onboarded more than five tournament staff members. Under my leadership, the average tournament player count increased by 600%.
+            I started as a moderator, became a tournament organizer, and eventually moved into an administrator role, overseeing tournaments and community management.
+            I onboarded more than five tournament staff members. Under my leadership, the average number of players per tournament increased by 600%.
             <br></br>
             Volunteer position
           </p>
@@ -318,9 +318,9 @@ export default function Page() {
           emoji: "🥉",
           description: <>
             <TextLink href="https://tourdeapp.com/">Tour de App</TextLink> is a team web development competition for high school students. <br></br>
-            Worked with my classmate <TextLink href="https://github.com/Zero5G">Jakub Manoušek</TextLink> <br></br>
-            The competition is not only about programming, as communicating with a client is a big part of it. <br></br>
-            The final was a two-day hackathon that involved building a new app from scratch and presenting it to a large audience.
+            I worked with my classmate <TextLink href="https://github.com/Zero5G">Jakub Manoušek</TextLink>. <br></br>
+            The competition involves more than programming; communicating with a client is also a big part of it. <br></br>
+            The final was a two-day hackathon during which we built a new app from scratch and presented it to a large audience.
           </>,
           subtitle: "3rd place",
           highlight: "bronze"
@@ -350,10 +350,10 @@ export default function Page() {
           emoji: "4️⃣",
           description: <>
             <TextLink href="https://tourdeapp.com/">Tour de App</TextLink> is a team web development competition for high school students. <br></br>
-            Worked with my classmate <TextLink href="https://github.com/TZT868">Maxim Vašíček</TextLink> and friend <TextLink href="https://strizova.com/">Eva Střížová</TextLink> <br></br>
-            The competition is not only about programming, as communicating with a client is a big part of it. <br></br>
-            The final was a three-day hackathon that involved building a new app from scratch and presenting it to a large audience.
-            That year, the theme of the final was AI, which made the challenge quite difficult because AI was not yet very powerful. <br></br>
+            I worked with my classmate <TextLink href="https://github.com/TZT868">Maxim Vašíček</TextLink> and my friend <TextLink href="https://strizova.com/">Eva Střížová</TextLink>. <br></br>
+            The competition involves more than programming; communicating with a client is also a big part of it. <br></br>
+            The final was a three-day hackathon during which we built a new app from scratch and presented it to a large audience.
+            That year's theme was AI, which made the challenge difficult because AI tools were still limited. <br></br>
             <TextLink href="https://robotikahrave.cz/2024/04/tour-de-app-2024/">
               Article I wrote about it for our school (in Czech only)
             </TextLink>
@@ -375,7 +375,7 @@ export default function Page() {
           emoji: "🏆",
           description: <>
             A puzzle and cybersecurity side competition held alongside <TextLink href="https://tourdeapp.com/">Tour de App</TextLink> 2024. <br></br>
-            It consisted of 20 flags (15 online and 5 in person at the hackathon). Our team found 12 of them, earning us first place.
+            It consisted of 20 flags (15 online and 5 in person at the hackathon). Our team found 12, earning first place.
             Some interesting challenges included hexadecimal Sudoku and a sign on a Minecraft server that could be found using Nmap.
           </>,
           subtitle: "1st place",
@@ -389,7 +389,7 @@ export default function Page() {
           title: "CV website",
           subtitle: "This website",
           description: <>
-            A simple portfolio website. First project where I tried to use AI to its fullest.
+            A simple portfolio website. This was my first project in which I tried to make full use of AI.
           </>,
           technologies: [
             { name: "Next.js", variant: "default" },
@@ -408,7 +408,7 @@ export default function Page() {
           title: "GateCraft wiki",
           subtitle: "Content and documentation writing",
           description: <>
-            Documentation for the Minecraft server <TextLink href="https://gatecraft.eu/">GateCraft</TextLink>. I have written 100+ pages from guides to location descriptions. Worked with the developers and community to make it as accurate as possible. Currently only available in Czech, but we are working on an English translation.
+            Documentation for the <TextLink href="https://gatecraft.eu/">GateCraft</TextLink> Minecraft server. I have written more than 100 pages, from guides to location descriptions. I worked with the developers and community to make the content as accurate as possible. It is currently available only in Czech, but we are working on an English translation.
           </>,
           technologies: [
             { name: "Writing", variant: "default" },
@@ -421,13 +421,13 @@ export default function Page() {
           image: "/img/projects/cerveneKombo.png",
           imageAlt: "Portrait used on this CV website",
           title: "Červené kombo",
-          subtitle: "Fullstack website with various Scratch Wars tools",
+          subtitle: "Full-stack website with various Scratch Wars tools",
           description: <>
-            This website allowed players to lookup the stats of their cards, which was impossible previously, since the API was undocumented. I later added the ability to scrape matches from Scratch Wars online and replay them. The interface was originally done using Material UI, then I redone it using v0 by Vercel.
+            This website allowed players to look up their cards' stats, which had not been possible because the API was undocumented. I later added the ability to scrape and replay matches from Scratch Wars Online. I originally built the interface with Material UI, then redesigned it using v0 by Vercel.
             <br></br>
-            This website had 100+ users monthtly at it's peak.
+            This website had more than 100 monthly users at its peak.
             <br></br>
-            Unfortunately most of it is broken, since the APIs it depended on no longer work.
+            Unfortunately, most of the site no longer works because the APIs it depended on are no longer available.
           </>,
           technologies: [
             { name: "Next.js", variant: "default" },
@@ -448,11 +448,11 @@ export default function Page() {
           subtitle: "Minecraft server development",
           description: <>
             <TextLink href="https://gatecraft.eu/">GateCraft</TextLink> is one of the longest running Czech Minecraft servers. It has been running on the same map since 2011.
-            More than 10 000 players have played on it since.
+            More than 10,000 players have played on it since then.
             <br></br>
-            There is a lot of custom plugins written in Kotlin, but we also use stock ones with a custom config where needed.
+            Many custom plugins are written in Kotlin, and we also use off-the-shelf plugins with custom configurations where needed.
             <br></br>
-            I mostly work on designing and creating dungeons, bosses and items.
+            I mostly design and create dungeons, bosses, and items.
           </>,
           technologies: [
             { name: "Minecraft", variant: "default" },
@@ -469,7 +469,7 @@ export default function Page() {
           title: "Panoview",
           subtitle: "Web 360° photo viewer",
           description: <>
-            I had some 360° photos from my drone and couldn't find a place to host them, so I created this website and embeded it onto the Ráječko website.
+            I had some 360° photos from my drone and couldn't find a place to host them, so I created this website and embedded them on the Ráječko website.
           </>,
           technologies: [
             { name: "Next.js", variant: "default" },
@@ -486,10 +486,10 @@ export default function Page() {
           image: "/img/projects/fiar.png",
           imageAlt: "Five-in-a-row game",
           title: "Five-in-a-row",
-          subtitle: "Fullstack gomoku/five-in-a-row web game",
+          subtitle: "Full-stack Gomoku (Five-in-a-Row) web game",
           description: <>
-            My first bigger web project. It has user registrations, matches with SWAP 2 opening and statistics. <br></br>
-            I made it because back then I didn't know of any public Five-in-a-row websites with SWAP 2 rule.
+            My first major web project. It includes user registration, matches with the SWAP 2 opening, and statistics. <br></br>
+            I made it because, at the time, I didn't know of any public Five-in-a-Row websites that supported the SWAP 2 rule.
           </>,
           technologies: [
             { name: "PHP", variant: "default" },
@@ -505,7 +505,7 @@ export default function Page() {
           title: "SimpleModel",
           subtitle: "Web-based 3D model editor prototype",
           description: <>
-            A simple web app to edit 3D models for 3D printing. The vision was something anyone could use to customize/slighty edit preset models.
+            A simple web app for editing 3D models for 3D printing. The goal was to create a tool anyone could use to customize or slightly edit preset models.
           </>,
           technologies: [
             { name: "JavaScript", variant: "default" },
@@ -522,7 +522,7 @@ export default function Page() {
           title: "MoleMoji",
           subtitle: "Electron app to quickly copy images as stickers/emoji",
           description: <>
-            A small prototype I made when my Discord Nitro expired and I wanted the ability to send stickers back without paying.
+            A small prototype I made after my Discord Nitro subscription expired, when I wanted to keep sending stickers without paying.
           </>,
           technologies: [
             { name: "JavaScript", variant: "default" },
