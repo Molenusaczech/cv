@@ -10,6 +10,7 @@ import rajtslegrData from "@/data/rajtslegr"
 import { Button, buttonVariants } from "@workspace/ui/components/button"
 import {
   Accessibility, Atom, Binary, Box, Braces, Code2, CodeXml, Database,
+  DatabaseArrowDown,
   Drone,
   FileCode2, FileSpreadsheet, Laptop, Network, PanelsTopLeft, Printer,
   Server, Sparkles, Terminal, Workflow,
@@ -207,6 +208,15 @@ export default function Page() {
             I started learning it when I joined the GateCraft team because the codebase is written entirely in Kotlin.
           </>,
           progress: 0.1
+        }} />
+        <SmallSkill skill={{
+          name: "SQL",
+          icon: <DatabaseArrowDown className="size-4" />,
+          summary: "Advanced",
+          description: <>
+            Used in a couple projects and a university course.
+          </>,
+          progress: 0.8
         }} />
         <SmallSkill skill={{
           name: "AI-assisted coding",
