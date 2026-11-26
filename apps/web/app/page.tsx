@@ -9,7 +9,7 @@ import EducationCard from "@/components/cv/educationCard"
 import rajtslegrData from "@/data/rajtslegr"
 import { Button, buttonVariants } from "@workspace/ui/components/button"
 import {
-  Accessibility, Atom, Binary, Box, Braces, Code2, CodeXml, Database,
+  Accessibility, Atom, Binary, Box, Braces, Car, Code2, CodeXml, Database,
   DatabaseArrowDown,
   Drone,
   FileCode2, FileSpreadsheet, Laptop, Network, PanelsTopLeft, Printer,
@@ -273,6 +273,15 @@ export default function Page() {
             One of my pictures was published by <TextLink href="https://my-face.cz/">MyFace</TextLink>.
           </>,
           progress: 0.8
+        }} />
+        <SmallSkill skill={{
+          name: "Driving",
+          icon: <Car className="size-4" />,
+          summary: "Category B",
+          description: <>
+            I have category B driver's licence, but I can only drive cars with the accelerator on the left due to my disability.
+          </>,
+          progress: 0.9
         }} />
 
       </SmallSkillCard>
